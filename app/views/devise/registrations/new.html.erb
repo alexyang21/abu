@@ -6,10 +6,13 @@
 
   <%= f.input :name, placeholder: 'John Smith' %>
   <%= f.input :email, placeholder: 'jsmith@gmail.com' %>
-  <%= f.input :address, placeholder: "1709 Broderick Street, San Francisco, CA 94115", :input_html => {:class => "span5"} %>
+  <%= f.input :address, placeholder: "1709 Broderick Street", :input_html => {:class => "span5"} %>
+  <%= f.input :city, placeholder: "San Francisco" %>
+  <%= f.input :state, placeholder: "CA" %>
+  <%= f.input :zipcode, placeholder: "94115" %>
   <%= f.input :phone, placeholder: '123-456-7890' %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
+  <%= f.input :password, placeholder: '********' %>
+  <%= f.input :password_confirmation, placeholder: '********' %>
 
   <div class="form-actions">
     <%= f.submit "Sign up", class: "btn btn-primary" %>

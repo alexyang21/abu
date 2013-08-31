@@ -4,10 +4,13 @@
 
   <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :address %>
-  <%= f.input :phone %>
+  <%= f.input :name, placeholder: 'John Smith' %>
+  <%= f.input :email, placeholder: 'jsmith@gmail.com' %>
+  <%= f.input :address, placeholder: "1709 Broderick Street", :input_html => {:class => "span5"} %>
+  <%= f.input :city, placeholder: "San Francisco" %>
+  <%= f.input :state, placeholder: "CA" %>
+  <%= f.input :zipcode, placeholder: "94115" %>
+  <%= f.input :phone, placeholder: '123-456-7890' %>
   <%= f.input :password, label: "New Password", autocomplete: "off" %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
   <%= f.input :current_password %>
