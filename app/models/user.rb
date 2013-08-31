@@ -5,8 +5,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation,
                   :remember_me, :address, :phone
-  # attr_accessible :title, :body
+
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :phone, presence: true
+  validates :phone, format: { with: / \d{9,10} /, message: "Phone number must contain 9 or 10 digits"}
+
 end
