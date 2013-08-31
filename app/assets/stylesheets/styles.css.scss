@@ -1,3 +1,30 @@
 @import 'bootstrap';
 
 @import 'bootstrap-responsive';
+
+body, html {
+  height: 100%;
+}
+
+.span6 {
+  text-align: center;
+}
+
+#menu-name {
+  margin-top: 150px;
+}
+
+#menu-description {
+  padding: 30px 30px;
+}
+
+.menu-image {
+  padding: 4px;
+  border: 2px solid #D8D8D8;
+  // background-color: #D8D8D8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #444;
+}
+

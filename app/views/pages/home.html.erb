@@ -1,1 +1,25 @@
-<h1>Auntie Abu</h1>
+<div class="row-fluid">
+  <div class="span6">
+    <div id="menu">
+
+      <div id="menu-headline">
+        <h1>Tonight's Menu</h1>
+      </div>
+
+      <%= image_tag "hong-shao-rou.jpg",  alt: "Bowl of rice",
+                                          # size: "800x800",
+                                          class: "menu-image" %>
+    </div>
+  </div>
+
+  <div class="span6">
+    <div id="menu-name">
+      <h3>Red Braised Pork (红烧肉)</h3>
+    </div>
+    <div id="menu-description">
+      <p class="lead">One of Mao Zedong's favorite foods, Red Braised Pork is a classic Chinese dish. Pork belly is slow-cooked in a combination of soy sauce, rice wine, garlic, and spices until it's soft enough to melt in your mouth.</p>
+    </div>
+    <%= link_to "Order now", "#", class: "btn btn-large btn-primary" %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-large btn-primary" %>
+  </div>
+</div>
