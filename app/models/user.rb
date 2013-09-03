@@ -17,6 +17,6 @@ class User < ActiveRecord::Base
 
   validates :zipcode, format: { with: /\d{5}/, message: "Zipcode must contain 5 digits" }
 
-  validates :phone, format: { with: /\d{9,10}/, message: "Phone number must contain 9 or 10 digits" }
+  validates :phone, format: { with: /\d{3}-\d{3}-\d{4}/, message: "Phone number must contain 9 or 10 digits" }
 
 end
