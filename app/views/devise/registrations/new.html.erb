@@ -1,22 +1,54 @@
 <h2>Sign up</h2>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: "form-horizontal"}) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
 
-  <%= f.error_notification %>
+    <%= f.error_notification %>
 
-  <%= f.input :name, placeholder: 'John Smith' %>
-  <%= f.input :email, placeholder: 'jsmith@gmail.com' %>
-  <%= f.input :address, placeholder: "1709 Broderick Street", :input_html => {:class => "span5"} %>
-  <%= f.input :city, placeholder: "San Francisco" %>
-  <%= f.input :state, placeholder: "CA" %>
-  <%= f.input :zipcode, placeholder: "94115" %>
-  <%= f.input :phone, placeholder: '123-456-7890' %>
-  <%= f.input :password, placeholder: '********' %>
-  <%= f.input :password_confirmation, placeholder: '********' %>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.input :name,
+                    placeholder: 'John Smith',
+                    input_html: {class: 'span4'} %>
+        <%= f.input :email,
+                    placeholder: 'jsmith@gmail.com' %>
+        <%= f.input :address,
+                    placeholder: "1709 Broderick Street" %>
+      </div>
+    </div>
 
-  <div class="form-actions">
-    <%= f.submit "Sign up", class: "btn btn-primary" %>
-  </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.input :city, label: 'City/State/Zip',
+                    input_html: {class: 'span4'},
+                    wrapper_html: {class: 'controls controls-row'} do %>
+          <%= f.input_field :city, class: 'span2',
+                            placeholder: "San Francisco" %>
+          <%= f.input_field :state, class: 'span1',
+                            placeholder: "CA" %>
+          <%= f.input_field :zipcode, class: 'span1',
+                            placeholder: "94115" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.input :phone,
+                    placeholder: '123-456-7890' %>
+        <%= f.input :password,
+                    placeholder: '********' %>
+        <%= f.input :password_confirmation,
+                    placeholder: '********' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <div class="form-actions">
+          <%= f.submit "Sign up", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
 <% end %>
 
 <%= render "devise/shared/links" %>

@@ -6,10 +6,6 @@ body, html {
   height: 100%;
 }
 
-.span6 {
-  text-align: center;
-}
-
 #menu-name {
   margin-top: 150px;
 }
@@ -28,3 +24,24 @@ body, html {
   box-shadow: 1px 1px 10px #444;
 }
 
+.center {
+  text-align: center;
+}
+
+// Form styling
+
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin: 0px 10px;
+}
+
+.form-horizontal .controls {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 0px;
+}

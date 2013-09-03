@@ -8,20 +8,15 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation,
                   :remember_me, :address, :city, :state, :zipcode, :phone
 
-  validates :name, presence: true
+  validates_presence_of :name, :email, :password, :password_confirmation,
+                        :address, :city, :state, :zipcode, :phone
 
-  validates :address, presence: true
-
-  validates :city, presence: true
   validates :city, format: { with: /[a-zA-Z\s]+/, message: "City can only contain letters and spaces" }
 
-  validates :state, presence: true
   validates :state, format: { with: /[a-zA-Z]{2}/, message: "State must contain two letters" }
 
-  validates :zipcode, presence: true
   validates :zipcode, format: { with: /\d{5}/, message: "Zipcode must contain 5 digits" }
 
-  validates :phone, presence: true
   validates :phone, format: { with: /\d{9,10}/, message: "Phone number must contain 9 or 10 digits" }
 
 end
