@@ -1,5 +1,7 @@
 <!-- Button to trigger modal -->
-<a href="#signupModal" role="button" class="btn btn-large btn-success" data-toggle="modal">Sign up</a>
+<div class="center">
+  <a href="#signupModal" role="button" class="btn btn-large btn-success" data-toggle="modal">Sign up</a>
+</div>
 
 <!-- Modal -->
 <div id="signupModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
@@ -14,8 +16,8 @@
 
       <%= f.error_notification %>
 
-      <div class="control-group">
-        <div class="controls">
+<!--       <div class="control-group">
+        <div class="controls"> -->
           <%= f.input :name,
                       placeholder: 'John Smith',
                       input_html: {class: 'span7'} %>
@@ -25,11 +27,7 @@
           <%= f.input :address,
                       placeholder: "1709 Broderick Street",
                       input_html: {class: 'span7'} %>
-        </div>
-      </div>
 
-      <div class="control-group">
-        <div class="controls">
           <%= f.input :city, label: 'City/State/Zip',
                       input_html: {class: 'span7'},
                       wrapper_html: {class: 'controls controls-row'} do %>
@@ -40,11 +38,7 @@
             <%= f.input_field :zipcode, class: 'span2',
                               placeholder: "94115" %>
           <% end %>
-        </div>
-      </div>
 
-      <div class="control-group">
-        <div class="controls">
           <%= f.input :phone,
                       placeholder: '123-456-7890',
                       input_html: {class: 'span3'} %>
@@ -54,8 +48,8 @@
           <%= f.input :password_confirmation,
                       placeholder: '********',
                       input_html: {class: 'span3'} %>
-        </div>
-      </div>
+<!--         </div>
+      </div> -->
 
       <div class="form-actions">
         <%= f.submit "Sign up", class: "btn btn-large btn-success" %>
