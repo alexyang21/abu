@@ -12,7 +12,9 @@
 
   <div class="modal-body">
 
-    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}, remote: true) do |f| %>
+    <%= simple_form_for(resource, :as => resource_name,
+                                  :url => registration_path(resource_name),
+                                  :html => {:id => "signup-form", :class => "form-horizontal"}) do |f| %>
 
       <%= f.error_notification %>
 

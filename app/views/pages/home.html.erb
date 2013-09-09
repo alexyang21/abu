@@ -20,13 +20,13 @@
         <p class="lead">Pork belly is slow-cooked in a combination of soy sauce, rice wine, garlic, and spices until it's soft enough to melt in your mouth.</p>
       </div>
 
-      <% if user_signed_in? %>
-        <div class="center">
+      <div class="center">
+        <% if user_signed_in? %>
           <%= link_to "Order now", "#", class: "btn btn-large btn-primary" %>
-        </div>
-      <% else %>
-        <%= render "shared/signupModal" %>
-      <% end %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-large btn-success" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
