@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Abu::Application.load_tasks
+Sixspoons::Application.load_tasks

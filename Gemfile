@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'figaro'
+gem 'rename'
 
 group :production do
   gem 'pg'

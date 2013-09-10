@@ -1,3 +1,3 @@
-# Auntie Abu
+# Auntie Sixspoons
 
-This is the website for Auntie Abu, an affordable delivery service for healthy home cooking.
+This is the website for Auntie Sixspoons, an affordable delivery service for healthy home cooking.
