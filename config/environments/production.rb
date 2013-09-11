@@ -66,14 +66,15 @@ Sixspoons::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # In production, :host should be set to the actual host of your application.
-  config.action_mailer.default_url_options = { :host => 'sixspoons.com' }
+
 
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
+  config.action_mailer.default_url_options = { :host => 'sixspoons.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "127.0.0.1",
-    :port    => 25,
+    :port    => "25",
     :domain  => 'sixspoons.com'
   }
 end
